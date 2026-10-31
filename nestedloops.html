@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DECISION CONTROL STRUCTURE</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #F1F5F9;
+        color: #263445;
+    }
+
+    h1 {
+        text-align: center;
+        color: #163A5F;
+    }
+
+    .question-box {
+        background-color: #DCEAF2;
+        padding: 20px;
+        margin-bottom: 25px;
+        border: 1px solid #A9C7D8;
+        border-radius: 10px;
+    }
+
+    .question {
+        background-color: #FFF0DC;
+        padding: 15px;
+        color: #8A4B08;
+        border-radius: 6px;
+        border-left: 4px solid #F39C36;
+    }
+
+    .code {
+        background-color: #163A5F;
+        color: #EAF4F4;
+        padding: 15px;
+        border-radius: 6px;
+        overflow-x: auto;
+    }
+
+    .output {
+        background-color: #DDF3ED;
+        color: #145A48;
+        padding: 15px;
+        border-radius: 6px;
+        border: 1px solid #36A88A;
+        overflow-x: auto;
+    }
+
+    pre {
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+    }
+</style>
+</head>
+
+<body>
+
+    <h4 style="text-align: center;">
+        <a href="index.html">HOME</a>
+    </h4>
+
+    <h1>Iterative Control Structure(Loops)</h1>
+    <p style="text-align: center;">PRACTICE QUESTIONS</p>
+    <hr>
+
+    <div class="question-box">
+        <h2>QUESTION 1</h2>
+
+        <div class="question">
+            <pre><b>Q1.Write a program to enter a number from the user and find out the binary of that number.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+void main()
+{
+int num, rem, binary = 0, place = 1;
+
+    printf("Enter a number: ");
+    scanf("%d",&num);
+
+    if(num == 0)
+      printf("Binary = 0");
+    else if(num > 0){
+        while(num > 0)
+        {
+            rem = num % 2;
+            binary = binary + rem * place;
+            place = place * 10;
+            num = num / 2;
+        }
+
+          printf("Binary = %d",binary);
+        }
+        else 
+          printf("Please enter a positive number.");
+  delay(3000);
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter a number: 10
+Binary = 1010
+</code></pre>
+        </div>
+    </div>
+<div class="question-box">
+        <h2>QUESTION 2</h2>
+
+        <div class="question">
+            <pre><b>Q2.Write a program to enter a number from the user and check that the number is divisible by any prime number or not.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;dos.h&gt;
+void main()
+{
+int num, i, j, prime, found = 0 ;
+
+    printf("Enter a number: ");
+    scanf("%d",&num);
+
+    for(i = 2; i < num ; i++)
+    {
+        prime = 1;
+
+        for(j = 2; j < i; j++)
+        {
+            if(i % j== 0)
+            {
+                prime = 0;
+                break;
+            }
+        }
+
+    if(prime == 1 && num % i == 0)
+        { 
+          printf("Divisible by prime number : %d",i);
+          found = 1;
+        }
+    }
+
+    if(found == 0)
+    {
+        printf("Not divisible by any smaller prime number.")
+    }
+      delay(3000);
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter a number: 15
+Divisible by prime number : 3
+</code></pre>
+        </div>
+    </div>
+<div class="question-box">
+        <h2>QUESTION 3</h2>
+
+        <div class="question">
+            <pre><b>Q3.Write a program to enter a number from the user and check it is a prime number or not.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;dos.h&gt;
+void main()
+{
+int num, i, prime = 1;
+
+    printf("Enter a number: ");
+    scanf("%d",&num);
+
+    if(num <= 1)
+      prime = 0;
+    else 
+    {
+        for(i = 2; i < num; i++)
+        {
+            if(num % i == 0)
+            {
+                prime = 0;
+                break;
+            }
+        }
+    }
+
+    if(prime == 1)
+      printf("Number is Prime.");
+    else 
+      printf("Number is Not Prime.");
+        delay(3000);
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter a number: 7
+Number is Prime.
+
+</code></pre>
+        </div>
+    </div>
+<div class="question-box">
+        <h2>QUESTION 4</h2>
+
+        <div class="question">
+            <pre><b>Q4.Write a program to enter a number from the user and print all digit of the number in separate line.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;dos.h&gt;
+void main()
+{int num, rem, rev = 1;
+
+    printf("Enter a number: ");
+    scanf("%d",&num);
+
+    if(num < 0)
+      num = -num;
+    
+    while(num > 0)
+    {
+        rem = num % 10;
+        rev = rev * 10 + rem;
+        num = num /10;
+    }
+
+    while(rev > 0)
+    {
+        rem = rev % 10;
+        printf("%d\n", rem);
+        rev = rev / 10;
+    }
+
+        delay(3000);
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter a number: 1234
+1
+2
+3
+4
+
+</code></pre>
+        </div>
+    </div>
+<div class="question-box">
+        <h2>QUESTION 5</h2>
+
+        <div class="question">
+            <pre><b>Q5. Write a program to print your name 1 lakh times.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;dos.h&gt;
+void main()
+{int i;
+
+    for(i = 1; i <= 100000; i++)
+    {
+        printf("VARSHA\n");
+    }
+
+        delay(3000);
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+VARSHA
+VARSHA
+VARSHA
+VARSHA
+VARSHA
+VARSHA
+VARSHA
+VARSHA
+VARSHA
+VARSHA
+VARSHA
+VARSHA
+VARSHA
+VARSHA
+VARSHA
+VARSHA
+
+</code></pre>
+        </div>
+    </div>
+<div class="question-box">
+        <h2>QUESTION 6</h2>
+
+        <div class="question">
+            <pre><b>Q6.Write a program to print a series 1 to 1 lakh.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;dos.h&gt;
+void main()
+{
+    int i;
+
+    for(i = 1; i <= 100000; i++)
+    {
+        printf("%d\n",i);
+    }
+        delay(3000);
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+1
+2
+3
+4
+5
+...
+99995
+99996
+99997
+99998
+99999
+100000
+
+</code></pre>
+        </div>
+    </div>
+<div class="question-box">
+        <h2>QUESTION 7</h2>
+
+        <div class="question">
+            <pre><b>Q7.Write a program to Enter a number from the user and print the series from 1 to that number.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;dos.h&gt;
+void main()
+{
+   int num, i;
+
+    printf("Enter a number: ");
+    scanf("%d",&num);
+
+    for(i = 1; i <= num; i++)
+    {
+        printf("%d\n",i);
+    }
+        delay(3000);
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter a number: 10
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+</code></pre>
+        </div>
+    </div>
+    <div class="question-box">
+        <h2>QUESTION 8</h2>
+
+        <div class="question">
+            <pre><b>Q8.Write a program to Enter a number from the user and print that number 100 time.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;dos.h&gt;
+void main()
+{
+   int num, i;
+
+    printf("Enter a number: ");
+    scanf("%d",&num);
+
+    for(i = 1; i <= 100; i++)
+    {
+        printf("%d\n",num);
+    }
+         delay(3000);
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter a number: 5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+5
+
+</code></pre>
+        </div>
+    </div>
+    <div class="question-box">
+        <h2>QUESTION 9</h2>
+
+        <div class="question">
+            <pre><b>Q9.Write a program print all the odd number between 1 to 100.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;dos.h&gt;
+void main()
+{
+   int i;
+
+    for(i = 1; i <= 100; i++)
+    {
+        if(i % 2 != 0)
+        printf("%d\n",i);
+    }
+        delay(3000);
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter a number: 5
+3
+5
+7
+9
+11
+...
+93
+95
+97
+99
+
+</code></pre>
+        </div>
+    </div><div class="question-box">
+        <h2>QUESTION 10</h2>
+
+        <div class="question">
+            <pre><b>Q10.Write a program print the table of 4 in the format given as below (till 20) 4*1=4 and so on.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;dos.h&gt;
+void main()
+{
+   int i;
+
+    for(i = 1; i <= 20; i++)
+    {
+        printf("4 * %d = %d\n", i, 4 * i);
+    }
+        delay(3000);
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+4 * 1 = 4
+4 * 2 = 8 
+4 * 3 = 12
+4 * 4 = 16
+4 * 5 = 20
+4 * 6 = 24
+4 * 7 = 28
+4 * 8 = 32
+4 * 9 = 36
+4 * 10 = 40
+4 * 11 = 44
+4 * 12 = 48
+4 * 13 = 52
+4 * 14 = 56
+4 * 15 = 60
+4 * 16 = 64
+4 * 17 = 68
+4 * 18 = 72
+4 * 19 = 76
+4 * 20 = 80
+</code></pre>
+        </div>
+    </div>
+<div class="question-box">
+        <h2>QUESTION 11</h2>
+
+        <div class="question">
+            <pre><b>Q11.Write a program to enter the number from user and reverse the number.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;dos.h&gt;
+void main()
+{
+   int num, rem, rev = 0;
+
+    printf("Enter a number: ");
+    scanf("%d",&num);
+
+    while(num != 0)
+    {
+        rem = num % 10;
+        rev = rev * 10 + rem;
+        num = num / 10;
+    }
+
+    printf("Reverse = %d",rev);
+    }
+        delay(3000);
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter a number: 12345
+Reverse = 54321
+</code></pre>
+        </div>
+    </div>
+    <div class="question-box">
+        <h2>QUESTION 12</h2>
+
+        <div class="question">
+            <pre><b>Q12.Enter a number from the user if the user enter 1 then you will perform addition operation by entering 2 number from user add it and display answer. if user enter 2 then subtract or if user enter 3 then multiply or if user enter 4 then divide or if user enter 5 then modulo or if any other number then print invalid .if user want to quit the program then user will enter Q.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;dos.h&gt;
+#include &lt;conio.h&gt;
+void main()
+{
+   int a, b;
+    char ch;
+
+    clrscr();
+
+    do{
+        printf("\n1. Addition");
+        printf("\n2. Subtraction");
+        printf("\n3. Multiplication");
+        printf("\n4. Division");
+        printf("\n5. Modulo");
+        printf("\nEnter your choice or Q to quit: ");
+        ch=getche();
+
+        if(ch == 'Q' || ch == 'q')
+        break;
+
+        if(ch >= '1' && ch <= '5')
+        {
+            printf("\nEnter 1st number: ");
+            scanf("%d",&a);
+            printf("Enter 2nd number: ");
+            scanf("%d",&b);
+
+            switch(ch)
+            {
+                case '1':
+                  printf("Addition = %d", a + b);
+                  break;
+
+                case '2':
+                  printf("Subtraction = %d", a - b);
+                  break;
+
+                case '3':
+                  printf("Multiplication = %d", a * b);
+                  break;
+
+                case '4':
+                if(b != 0)
+                  printf("Division = %d", a / b);
+                else
+                  printf("Division by Zero is not possible.");
+                  break;
+
+                case '5':
+                  if(b != 0)
+                  printf("Modulo = %d", a % b);
+                else
+                  printf("Modulo by Zero is not possible.");
+                  break;
+            }
+        }
+
+        else
+        printf("\nInvalid Choice!");
+    } while(1);
+    
+    printf("\nProgram Quit.");
+        delay(3000);
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Modulo
+Enter your choice or Q to quit: 1
+Enter 1st number: 10
+Enter 2nd number: 5
+Addition = 15
+
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Modulo
+Enter your choice or Q to quit: 9
+Invalid Choice!
+
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Modulo
+Enter your choice or Q to quit: Q
+Program Quit
+</code></pre>
+        </div>
+    </div>
+    <div class="question-box">
+        <h2>QUESTION 13</h2>
+
+        <div class="question">
+            <pre><b>Q13.Write a program to enter the number from user and check its palindrome or not.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;dos.h&gt;
+void main()
+{
+   int num, original, rem, rev=0;
+
+    printf("Enter a number: ");
+    scanf("%d",&num);
+
+    original = num;
+
+    while(num > 0)
+    {
+        rem = num % 10;
+        rev = rev * 10 + rem;
+        num = num / 10;
+    }
+
+    if(original == rev)
+      printf("Number is Palindrome");
+
+    else
+      printf("Number is Not Palindrome");
+        delay(3000);
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter a number: 121
+Number is Palindrome
+</code></pre>
+        </div>
+    </div>
+    <div class="question-box">
+        <h2>QUESTION 14</h2>
+
+        <div class="question">
+            <pre><b>Q14.Write a program to enter two numbers from users, one is base and second is power. Write the result.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;dos.h&gt;
+void main()
+{
+   int base, pow, i, result = 1;
+
+    printf("Enter a base: ");
+    scanf("%d",&base);
+
+    printf("Enter a power: ");
+    scanf("%d",&pow);
+
+    if(pow >= 0)
+    {
+        for(i = 1; i <= pow; i++)
+        {
+            result = result * base;
+        }
+      printf("Result = %d", result);
+    }
+
+    else
+      printf("Negative power is not supported.");
+        delay(3000);
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter a base: 2
+Enter a power: 5
+Result = 32
+</code></pre>
+        </div>
+    </div>
+    <div class="question-box">
+        <h2>QUESTION 15</h2>
+
+        <div class="question">
+            <pre><b>Q15.Write a program to enter a number from user and print first digit of number.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;dos.h&gt;
+void main()
+{
+   int num;
+
+    printf("Enter a number: ");
+    scanf("%d",&num);
+
+    while(num >= 10)
+    {
+        num = num / 10;
+    }
+
+    printf("First digit = %d",num);
+        delay(3000);
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter a number: 4087
+First digit = 4
+</code></pre>
+        </div>
+    </div>
+    <div class="question-box">
+        <h2>QUESTION 16</h2>
+
+        <div class="question">
+            <pre><b>Q16.Write a program to enter a number from user and print total from 0 to that number.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;dos.h&gt;
+void main()
+{
+   int num, i, sum = 0;
+
+    printf("Enter a number: ");
+    scanf("%d",&num);
+
+    for(i = 0; i <= num; i++)
+    sum = sum + i;
+
+    printf("Sum = %d",sum);
+        delay(3000);
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter a number: 8
+Sum = 36
+</code></pre>
+        </div>
+    </div>
+    <div class="question-box">
+        <h2>QUESTION 17</h2>
+
+        <div class="question">
+            <pre><b>Q17.Write a program to enter a number from user and find out factorial of that number.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;dos.h&gt;
+void main()
+{
+   int num, i, fact = 1;
+
+    printf("Enter a number: ");
+    scanf("%d",&num);
+
+    for(i = 0; i <= num; i++)
+    fact = fact * i;
+
+    printf("Factorial = %d",fact);
+        delay(3000);
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter a number: 6
+Factorial = 720
+</code></pre>
+        </div>
+    </div>
+    <div class="question-box">
+        <h2>QUESTION 18</h2>
+
+        <div class="question">
+            <pre><b>Q18.Write a program to enter two numbers from user and print range from first number to second number.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;dos.h&gt;
+void main()
+{
+   int num1, num2, i;
+
+    printf("Enter starting number: ");
+    scanf("%d",&num1);
+    printf("Enter ending number: ");
+    scanf("%d",&num2);
+
+    for(i = num1; i <= num2; i++)
+    {
+        printf("%d ",i);
+    }
+        delay(3000);
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter starting number: 87
+Enter ending number: 103
+87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103
+</code></pre>
+        </div>
+    </div>
+    <div class="question-box">
+        <h2>QUESTION 19</h2>
+
+        <div class="question">
+            <pre><b>Q19.Write a program to enter password from user maximum 20 digits / character press enter key if you want to exit.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;dos.h&gt;
+void main()
+{
+   int i;
+    char pass[21];
+
+    printf("Enter password : ");
+    for(i = 0; i < 20; i++)
+    {
+        pass[i] = getche();
+
+        if(pass[i] == 13)
+        break;
+    }
+
+    pass[i] = '\0';
+    printf("\nPassword: %s",pass);
+        delay(3000);
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>Enter password : VARSHA222222
+Password: VARSHA222222
+</code></pre>
+        </div>
+    </div>
+    <div class="question-box">
+        <h2>QUESTION 20</h2>
+
+        <div class="question">
+            <pre><b>Q20.Write a program to print the counting 1 to 100 with one second delay.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;dos.h&gt;
+void main()
+{
+   int i;
+
+    for(i = 0; i < 20; i++)
+    {
+        printf("%d\n",i);
+        delay(1000);
+    }
+</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+1
+2
+3
+4
+5
+6
+.
+.
+.
+96
+97
+98
+99
+100
+</code></pre>
+        </div>
+    </div>
+    <div class="question-box">
+        <h2>QUESTION 21</h2>
+
+        <div class="question">
+            <pre><b>Q21.Write a program to find out the Fibonacci series/ 1 to 100 (like 0 1 1 2 3 5 8 13………).</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;dos.h&gt;
+void main()
+{
+   int a = 0, b = 1, c;
+
+    while(a <= 100){
+        printf("%d ",a);
+
+        c = a + b;
+        a = b;
+        b = c;
+    }
+        delay(3000);
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+0 1 1 2 3 5 8 13 21 24 34 55 89
+</code></pre>
+        </div>
+    </div>
+    <div class="question-box">
+        <h2>QUESTION 22</h2>
+
+        <div class="question">
+            <pre><b>Q22.Write a program to enter a character from user and that character should be alphabet.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;dos.h&gt;
+#include &lt;conio.h&gt;
+void main()
+{
+   char ch;
+
+    printf("Enter a character: ");
+    ch = getche();
+
+    if(ch >= 'A' && ch <= 'Z' || ch >= 'a' && ch <= 'z')
+      printf("It is an Alphabet.");
+
+    else
+      printf("It is not an Alphabet.");
+        delay(3000);
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>
+C:\TURBOC3\BIN>TC
+Enter a character: S 
+It is an Alphabet.</code></pre>
+        </div>
+    </div>
+    <div class="question-box">
+        <h2>QUESTION 23</h2>
+
+        <div class="question">
+            <pre><b>Q23.Write a program to enter a number from user and check it is Armstrong number or not.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;dos.h&gt;
+void main()
+{
+   int num, original, rem, sum = 0;
+
+    printf("Enter a number: ");
+    scanf("%d",&num);
+
+    original = num;
+
+    while(num > 0)
+    {
+        rem = num % 10;
+        sum sum + (rem * rem * rem);
+        num = num / 10;
+    }
+
+    if(original == sum)
+      printf("It is an Armstrong Number.");
+    else
+      printf("It is not an Armstrong Number.");
+        delay(3000);
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter a number: 370
+It is an Armstrong Number.
+</code></pre>
+        </div>
+    </div>
+     <hr>
+        <p><a href="index.html">Back To Topics</a></p> 
+    </body>
+    </html>

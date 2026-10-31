@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DECISION CONTROL STRUCTURE</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #F1F5F9;
+        color: #263445;
+    }
+
+    h1 {
+        text-align: center;
+        color: #163A5F;
+    }
+
+    .question-box {
+        background-color: #DCEAF2;
+        padding: 20px;
+        margin-bottom: 25px;
+        border: 1px solid #A9C7D8;
+        border-radius: 10px;
+    }
+
+    .question {
+        background-color: #FFF0DC;
+        padding: 15px;
+        color: #8A4B08;
+        border-radius: 6px;
+        border-left: 4px solid #F39C36;
+    }
+
+    .code {
+        background-color: #163A5F;
+        color: #EAF4F4;
+        padding: 15px;
+        border-radius: 6px;
+        overflow-x: auto;
+    }
+
+    .output {
+        background-color: #DDF3ED;
+        color: #145A48;
+        padding: 15px;
+        border-radius: 6px;
+        border: 1px solid #36A88A;
+        overflow-x: auto;
+    }
+
+    pre {
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+    }
+</style>
+</head>
+
+<body>
+
+    <h4 style="text-align: center;">
+        <a href="index.html">HOME</a>
+    </h4>
+
+    <h1>OPERATORS PROGRAME</h1>
+    <p style="text-align: center;">PRACTICE QUESTIONS</p>
+    <hr>
+
+    <div class="question-box">
+        <h2>QUESTION 1</h2>
+
+        <div class="question">
+            <pre><b>Q1. Write a program to show an example of pre-increament</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+void main()
+{
+    int a=5;
+    
+    printf("Value of a = %d",++a);
+    return 0;
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Value of a = 6</code></pre>
+        </div>
+    </div>
+    <div class="question-box">
+        <h2>QUESTION 2</h2>
+
+        <div class="question">
+            <pre><b>Q2. Write a program to show an example of post-increament</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+void main()
+{
+    int a=5;
+    
+    printf("Value of a before increment = %d\n",a++);
+    printf("Value of a after increment = %d",a);
+    return 0;
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Value of a before increment = 5
+Value of a after increment = 6</code></pre>
+        </div>
+    </div>
+     <div class="question-box">
+        <h2>QUESTION 3</h2>
+
+        <div class="question">
+            <pre><b>Q3. Write a program to show an example of post-decreament</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+void main()
+{
+    int a=5;
+    
+    printf("Value of a = %d",--a);
+
+    return 0;
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Value of a = 4</code></pre>
+        </div>
+    </div>
+ <div class="question-box">
+        <h2>QUESTION 4</h2>
+
+        <div class="question">
+            <pre><b>Q4. Write a program to show an example of post-decreament</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+void main()
+{
+    int a=5;
+    
+    printf("Value of a before decrement = %d\n",a--);
+    printf("Value of a after decrement = %d",a);
+
+
+    return 0;
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Value of a before decrement = 5
+Value of a after decrement = 4</code></pre>
+        </div>
+    </div>
+    <div class="question-box">
+        <h2>QUESTION 5</h2>
+
+        <div class="question">
+            <pre><b>Q5.Write a program to enter 2 numbers from user add the number and show the answer , again take 2 number from user subtract the number display the answer ,again take 2 number from user multiply the number display the answer and ,again take 2 number from the user divide the number display the answer ,again take 2 number find the remainder and display the answer</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+void main()
+{
+   int num1,num2;
+    
+    printf("Enter two numbers: ");
+    scanf("%d %d",&num1,&num2);
+    printf("Addition = %d\n\n",num1 + num2);
+
+    printf("Enter two numbers: ");
+    scanf("%d %d",&num1,&num2);
+    printf("Subtraction = %d\n\n",num1 - num2);
+
+    printf("Enter two numbers: ");
+    scanf("%d %d",&num1,&num2);
+    printf("Multiplication = %ld\n\n",num1 * num2);
+
+    printf("Enter two numbers: ");
+    scanf("%d %d",&num1,&num2);
+    printf("Division = %d\n\n",num1 / num2);
+
+    printf("Enter two numbers: ");
+    scanf("%d %d",&num1,&num2);
+    printf("Remainder = %d\n",num1 % num2);
+
+
+
+    return 0;
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter two numbers: 22 10
+Addition = 32
+
+Enter two numbers: 63 58
+Subtraction = 5
+
+Enter two numbers: 51 5
+Multiplication = 255
+
+Enter two numbers: 50 10
+Division = 5
+
+Enter two numbers: 10 3
+Remainder = 1
+</code></pre>
+        </div>
+    </div>
+
+ <div class="question-box">
+        <h2>QUESTION 6</h2>
+
+        <div class="question">
+            <pre><b>Q6.Write a program to enter a number and print its last digit.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+void main()
+{
+int num,last;
+    
+    printf("Enter any number: ");
+    scanf("%d",&num);
+    last = num % 10;
+    printf("Last digit is = %d",last);
+
+
+    return 0;
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter any number:9685 
+Last digit is = 5</code></pre>
+        </div>
+    </div>
+
+ <div class="question-box">
+        <h2>QUESTION 7</h2>
+
+        <div class="question">
+            <pre><b>Q7.Write a program to enter a number and print the digits after the decimal point..</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+void main()
+{
+float num;
+    int a;
+    
+    printf("Enter a decimal number: ");
+    scanf("%f",&num);
+    a = num ;
+    num = num - a;
+    num = num*100;
+    a=num;
+
+    printf("Decimal part = %d",a);
+
+
+    return 0;
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter a decimal number: 52.63 
+Decimal part = 63</code></pre>
+        </div>
+    </div>
+<div class="question-box">
+        <h2>QUESTION 8</h2>
+
+        <div class="question">
+            <pre><b>Q8.Write a program to enter a number and find its cube..</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+void main()
+{
+int num,res;
+    
+    printf("Enter a number: ");
+    scanf("%d",&num);
+    
+    res = num * num * num;
+
+    printf("Cube = %d",res);
+
+
+    return 0;
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter a number: 10 
+Cube = 1000</code></pre>
+        </div>
+    </div>
+<div class="question-box">
+        <h2>QUESTION 9</h2>
+
+        <div class="question">
+            <pre><b>Q9.Write a program to enter a decimal number and round it off to the nearest integer.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+void main()
+{
+float num;
+    int round;
+    
+    printf("Enter a decimal number: ");
+    scanf("%f",&num);
+    
+    round = (int)(num + 0.5);
+
+    printf("Rounded number = %d",round);
+
+    return 0;
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter a decimal number: 57.8
+Rounded number = 58</code></pre>
+        </div>
+    </div>
+<div class="question-box">
+        <h2>QUESTION 10</h2>
+
+        <div class="question">
+            <pre><b>Q10.Write a program to enter a lowercase alphabet and convert it into uppercase..</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main()
+{
+char ch;
+
+    do{
+        printf("Enter a lowercase alphabet: ");
+        ch = getch();
+        printf("\n");
+    }   while(ch < 'a' || ch > 'z');
+    ch = ch - 32;
+    printf("Uppercase alphabet = %c",ch);
+
+    return 0;
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter a lowercase alphabet: b
+Uppercase alphabet = B</code></pre>
+        </div>
+    </div>
+<div class="question-box">
+        <h2>QUESTION 11</h2>
+
+        <div class="question">
+            <pre><b>Q11.Write a program to enter marks of three subjects and calculate their average.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main()
+{
+int num1,num2,num3;
+    float average;
+
+    printf("Enter first student marks: ");
+    scanf("%d",&num1);
+    printf("Enter second student marks: ");
+    scanf("%d",&num2);
+    printf("Enter third student marks: ");
+    scanf("%d",&num3);
+
+    average = (num1 + num2 + num3) / 3.0;
+
+    printf("Average marks = %.2f",average);
+
+    return 0;
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter first student marks: 70
+Enter second student marks: 80
+Enter third student marks: 90
+Average marks = 80</code></pre>
+        </div>
+    </div>
+<div class="question-box">
+        <h2>QUESTION 12</h2>
+
+        <div class="question">
+            <pre><b>Q12.Write a program to calculate interest using principal, rate and time.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main()
+{
+float p,r,t,si;
+    
+    printf("Enter principal amount: ");
+    scanf("%f",&p);
+    printf("Enter rate of interest: ");
+    scanf("%f",&r);
+    printf("Enter time in years: ");
+    scanf("%f",&t);
+
+    si = (p * r * t) / 100;
+
+    printf("Simple Interest = %.2f",si);
+    return 0;
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter principal amount: 5000
+Enter rate of interest: 5
+Enter time in years: 2
+Simple Interest = 500.00
+</code></pre>
+        </div>
+    </div>
+ <hr>
+        <p><a href="index.html">Back To Topics</a></p> 
+    </body>
+    </html>
