@@ -1,0 +1,421 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MULTI DIMENSION ARRAYS</title>
+
+   <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #F1F5F9;
+        color: #263445;
+    }
+
+    h1 {
+        text-align: center;
+        color: #163A5F;
+    }
+
+    .question-box {
+        background-color: #DCEAF2;
+        padding: 20px;
+        margin-bottom: 25px;
+        border: 1px solid #A9C7D8;
+        border-radius: 10px;
+    }
+
+    .question {
+        background-color: #FFF0DC;
+        padding: 15px;
+        color: #8A4B08;
+        border-radius: 6px;
+        border-left: 4px solid #F39C36;
+    }
+
+    .code {
+        background-color: #163A5F;
+        color: #EAF4F4;
+        padding: 15px;
+        border-radius: 6px;
+        overflow-x: auto;
+    }
+
+    .output {
+        background-color: #DDF3ED;
+        color: #145A48;
+        padding: 15px;
+        border-radius: 6px;
+        border: 1px solid #36A88A;
+        overflow-x: auto;
+    }
+
+    pre {
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+    }
+</style>
+</head>
+
+<body>
+
+    <h4 style="text-align: center;">
+        <a href="index.html">HOME</a>
+    </h4>
+
+    <h1>MULTI DIMENSION ARRAYS</h1>
+    <p style="text-align: center;">PRACTICE QUESTIONS</p>
+    <hr>
+
+    <div class="question-box">
+        <h2>QUESTION 1</h2>
+
+        <div class="question">
+            <pre><b>Q1.Enter the four number from user and print it into matrix</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+void main()
+{
+ int num[2][2], i, j;
+
+    printf("Enter 4 values: \n");
+    
+    for(i = 0; i <= 1; i++)
+    {
+        for(j = 0; j<=1; j++)
+        {
+            scanf("%d",&num[i][j]);
+        }
+    }
+
+    printf("Matrix is: \n");
+    for(i = 0; i <= 1; i++)
+    {
+        for(j = 0; j<=1; j++)
+        {
+            printf("%d ",&num[i][j]);
+        }
+        printf("\n");
+    }   
+return 0;   
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter 4 values: 
+10
+20
+30
+40
+Matrix is: 
+10 20
+30 40</code></pre>
+        </div>
+    </div>
+
+<div class="question-box">
+        <h2>QUESTION 2</h2>
+
+        <div class="question">
+            <pre><b>Q2.Write a program to enter the matrix from and transpose them.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+void main()
+{
+    int num[2][2], i, j;
+
+    printf("Enter 4 values: \n");
+    
+    for(i = 0; i <= 1; i++)
+    {
+        for(j = 0; j<=1; j++)
+        {
+            scanf("%d",&num[i][j]);
+        }
+    }
+
+    printf("\nOriginal Matrix : \n");
+    for(i = 0; i <= 1; i++)
+    {
+        for(j = 0; j<=1; j++)
+        {
+            printf("%d ",&num[i][j]);
+        }
+        printf("\n");
+    }   
+
+    printf("Transpose Matrix:\n");
+    for(i = 0; i<=1; i++)
+    {
+        for(j = 0; j <= 1; j++)
+        {
+            printf("%d ",num[j][i]);
+        }
+    }
+    return 0;
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter 4 values: 
+10
+20
+30
+40
+
+Original Matrix : 
+10 20
+30 40
+
+Transpose Matrix:
+10 30
+20 40</code></pre>
+        </div>
+    </div>
+
+<div class="question-box">
+        <h2>QUESTION 3</h2>
+
+        <div class="question">
+            <pre><b>Q3.Write a program to enter 2 matrix from user and add them.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+void main()
+{
+    int num[2][2], b[2][2], sum[2][2], i, j;
+
+    printf("Enter 4 values in first matrix: \n");
+    
+    for(i = 0; i <= 1; i++)
+    {
+        for(j = 0; j<=1; j++)
+        {
+            scanf("%d",&num[i][j]);
+        }
+    }
+    printf("Enter 4 values in second matrix: \n");
+    
+    for(i = 0; i <= 1; i++)
+    {
+        for(j = 0; j<=1; j++)
+        {
+            scanf("%d",&b[i][j]);
+        }
+    }
+
+
+    for(i = 0; i <= 1; i++)
+    {
+        for(j = 0; j<=1; j++)
+        {
+            sum[i][j] = num[i][j] + b[i][j];
+        }
+    }
+
+
+    printf("\nAddition of matrices : \n");
+    for(i = 0; i <= 1; i++)
+    {
+        for(j = 0; j<=1; j++)
+        {
+            printf("%d ",&sum[i][j]);
+        }
+        printf("\n");
+    }   
+    return 0;
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter 4 values in first matrix: 
+1 2
+3 4
+Enter 4 values in second matrix: 
+5 6
+7 8
+
+Addition Matrix : 
+6 8
+10 12</code></pre>
+        </div>
+    </div>
+
+<div class="question-box">
+        <h2>QUESTION 4</h2>
+
+        <div class="question">
+            <pre><b>Q4. Write a program to enter 2 matrix from user and subtract them.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+void main()
+{
+    int num[2][2], b[2][2], sub[2][2], i, j;
+
+    printf("Enter 4 values in first matrix: \n");
+    
+    for(i = 0; i <= 1; i++)
+    {
+        for(j = 0; j<=1; j++)
+        {
+            scanf("%d",&num[i][j]);
+        }
+    }
+    printf("Enter 4 values in second matrix: \n");
+    
+    for(i = 0; i <= 1; i++)
+    {
+        for(j = 0; j<=1; j++)
+        {
+            scanf("%d",&b[i][j]);
+        }
+    }
+
+
+    for(i = 0; i <= 1; i++)
+    {
+        for(j = 0; j<=1; j++)
+        {
+            sub[i][j] = num[i][j] - b[i][j];
+        }
+    }
+
+
+    printf("\nSubtraction of Matrices : \n");
+    for(i = 0; i <= 1; i++)
+    {
+        for(j = 0; j<=1; j++)
+        {
+            printf("%d ",&sub[i][j]);
+        }
+        printf("\n");
+    }   
+    return 0;
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter 4 values in first matrix: 
+10 20
+30 40
+Enter 4 values in second matrix: 
+1 2
+3 4
+
+Subtraction of Matrices : 
+9 18
+27 36</code></pre>
+        </div>
+    </div>
+
+<div class="question-box">
+        <h2>QUESTION 5</h2>
+
+        <div class="question">
+            <pre><b>Q5.Write a program to enter 2 matrix from user and multiply them. </b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+void main()
+{
+    int num[2][2], b[2][2], multi[2][2], i, j, k;
+
+    printf("Enter 4 values in first matrix: \n");
+    
+    for(i = 0; i <= 1; i++)
+    {
+        for(j = 0; j<=1; j++)
+        {
+            scanf("%d",&num[i][j]);
+        }
+    }
+    printf("Enter 4 values in second matrix: \n");
+    
+    for(i = 0; i <= 1; i++)
+    {
+        for(j = 0; j<=1; j++)
+        {
+            scanf("%d",&b[i][j]);
+        }
+    }
+
+
+    for(i = 0; i <= 1; i++)
+    {
+        for(j = 0; j<=1; j++)
+        {
+            c[i][j] = 0;
+            for(k = 0; k <= 1; k++)
+            {
+                multi[i][j] = multi[i][j] + num[i][k] * b[k][j];
+            }
+        }
+    }
+
+
+    printf("\nMultiplication of Matrices : \n");
+    for(i = 0; i <= 1; i++)
+    {
+        for(j = 0; j<=1; j++)
+        {
+            printf("%d ",&multi[i][j]);
+        }
+        printf("\n");
+    }   
+    return 0;
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter 4 values in first matrix: 
+2 3
+4 5
+Enter 4 values in second matrix: 
+1 2
+3 4
+
+Multiplication of Matrices : 
+11 16
+19 28</code></pre>
+        </div>
+    </div>
+    <hr>
+<a href="index.html"> Back To Topics </a>
+<hr>
+</body>
+</html>

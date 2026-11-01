@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FUNCTIONS</title>
+
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #F1F5F9;
+        color: #263445;
+    }
+
+    h1 {
+        text-align: center;
+        color: #163A5F;
+    }
+
+    .question-box {
+        background-color: #DCEAF2;
+        padding: 20px;
+        margin-bottom: 25px;
+        border: 1px solid #A9C7D8;
+        border-radius: 10px;
+    }
+
+    .question {
+        background-color: #FFF0DC;
+        padding: 15px;
+        color: #8A4B08;
+        border-radius: 6px;
+        border-left: 4px solid #F39C36;
+    }
+
+    .code {
+        background-color: #163A5F;
+        color: #EAF4F4;
+        padding: 15px;
+        border-radius: 6px;
+        overflow-x: auto;
+    }
+
+    .output {
+        background-color: #DDF3ED;
+        color: #145A48;
+        padding: 15px;
+        border-radius: 6px;
+        border: 1px solid #36A88A;
+        overflow-x: auto;
+    }
+
+    pre {
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+    }
+</style>
+</head>
+<body>
+
+    <h4 style="text-align: center;">
+        <a href="index.html">HOME</a>
+    </h4>
+
+    <h1>FUNCTIONS </h1>
+    <p style="text-align: center;">PRACTICE QUESTIONS</p>
+    <hr>
+
+    <div class="question-box">
+        <h2>QUESTION 1</h2>
+
+        <div class="question">
+            <pre><b>Q1. Write a program to enter 2 number from the users add them and display the answer, again enter 2 number from the user subtract them and display the answer, again enter 2 number from the user add them and display the answer, again enter 2 number from the user multiply them and display the answer, again enter 2 number from the user subtract them and display the answer, again enter 2 number from the user multiply them and display the answer, again enter 2 number from the user divide them and display the answer, again enter 2 number from the user divide them and display the answer, again enter 2 number from the user add them and display the answer.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+void main()
+{
+printf("Enter first number: ");
+	scanf("%d",&a);
+	printf("Enter second number: ");
+	scanf("%d",&b);
+}
+
+void add()
+{
+	result = a + b;
+	prinf("Addition = %d\n",result);
+}
+
+void sub()
+{
+	result = a - b;
+	prinf("Subtraction = %d\n",result);
+}
+
+void mul()
+{
+	result = a * b;
+	prinf("Multiplication = %d\n",result);
+}
+
+void div()
+{
+	if(b != 0)
+	{
+		result = a / b;
+		prinf("Division = %d\n",result);
+	}
+	else
+	{
+		printf("Division Not Possible.\n")
+	}
+}
+
+
+void main()
+{
+	input();
+	add();
+
+	input();
+	sub();
+
+	input();
+	add();
+
+	input();
+	mul();
+
+	input();
+	sub();
+
+	input();
+	mul();
+
+	input();
+	div();
+
+	input();
+	div();
+
+	input();
+	add();
+}
+  delay(3000);
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter first number: 10
+Enter second number: 5
+Addition = 15
+
+Enter first number: 20
+Enter second number: 8
+Subtraction = 12
+
+Enter first number: 15
+Enter second number: 5
+Addition = 20
+
+Enter first number: 6
+Enter second number: 4
+Multiplication = 24
+
+Enter first number: 30 
+Enter second number: 10
+Subtraction = 20
+
+Enter first number: 7
+Enter second number: 3
+Multiplication = 21
+
+Enter first number: 40
+Enter second number: 8
+Division = 5
+
+Enter first number: 36
+Enter second number: 6
+Division = 6
+
+Enter first number: 12
+Enter second number: 9
+Addition = 21
+
+</code></pre>
+        </div>
+    </div>
+<div class="question-box">
+        <h2>QUESTION 2 </h2>
+
+        <div class="question">
+            <pre><b>Q2. Write a program to enter 10 number from the user add the number and display the answer.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+void sum()
+{
+int i, n, s=0;
+
+	for(i = 1; i <= 10; i++)
+	{
+		printf("Enter a number: ");
+		scanf("%d",&n);
+		sum = sum + n;
+	}
+
+	printf("Sum = %d", sum);
+}
+
+void main()
+{
+	sum();
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>
+C:\TURBOC3\BIN>TC
+Enter a number: 1
+Enter a number: 2
+Enter a number: 3
+Enter a number: 4
+Enter a number: 5
+Enter a number: 6
+Enter a number: 7
+Enter a number: 8
+Enter a number: 9
+Enter a number: 10
+Sum = 55
+</code></pre>
+        </div>
+    </div>
+<div class="question-box">
+        <h2>QUESTION 3</h2>
+
+        <div class="question">
+            <pre><b>Q3. Write a program to return an array from function. </b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+int * fun()
+{
+	static int a[]={10,20,30,40,50};
+	return a;
+}
+
+void main()
+{
+	int *p, i;
+	p = fun();
+
+	printf("Array elements are:\n");
+
+	for(i = 0; i < 5; i++)
+	{
+		printf("%d\n",*p);
+		p++;
+	}
+
+    
+  delay(3000);
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>
+C:\TURBOC3\BIN>TC
+Array elements are:
+10
+20
+30
+40
+50
+</code></pre>
+        </div>
+    </div>
+<div class="question-box">
+
+        <h2>QUESTION 4</h2>
+
+        <div class="question">
+            <pre><b>Q4.Making following program using local and global variable ? Factorial , Reverse , Palindrome , Prime numbers, Armstrong , Fibonacci.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+
+void input()
+{
+	printf("Enter a number: ");
+	scanf("%d",&num);
+}
+
+void fact()
+{
+	int i, fact = 1;
+	for(i = 1; i <= num; i++)
+	  fact = fact * i;
+
+	printf("Factorial = %d\n",fact);
+}
+
+void reverse()
+{
+	int n, rem, rev = 0;
+	n = num;
+
+	while(n > 0)
+	{
+		rem = n % 10;
+		rev = rev * 10 + rem;
+		n = n / 10;
+	}
+
+	printf("Reverse = %d\n", rev);
+}
+
+void palindrome()
+{
+	int n, rem, rev = 0;
+	n = num;
+
+	while(n > 0)
+	{
+		rem = n % 10;
+		rev = rev * 10 + rem;
+		n = n / 10;
+	}
+
+	if(num == rev)
+	  printf("Palindrome Number\n");
+	else
+	  printf("Not a Palindrome Number\n");
+}
+
+void prime()
+{
+	int i, count = 0;
+
+	for(i = 1; i <= num; i++)
+	{
+		if(num % i == 0)
+		count++;
+	}
+
+	if(count == 2)
+	  printf("Prime Number\n");
+	else
+	  printf("Not a Prime Number\n");
+}
+
+void armstrong()
+{
+	int n, rem, sum = 0;
+	n = num;
+
+	while(n > 0)
+	{
+		rem = n % 10;
+		sum = sum + rem * rem * rem;
+		n = n /10;
+	}
+
+	if(num == sum)
+	  printf("Armstrong number\n");
+	else
+	  printf("Not an Armstrong number\n");
+}
+
+void fibonacci()
+{
+	int a = 0, b = 1, c, i;
+
+	printf("Fibonacci Series: ");
+	for(i = 1; i <= num; i++)
+	{
+		printf("%d ",a);
+		c = a + b;
+		a = b;
+		b = c;
+	}
+
+	printf("\n");
+}
+
+void main()
+{
+	input();
+	fact();
+
+	input();
+	reverse();
+
+	input();
+	palindrome();
+
+	input();
+	prime();
+
+	input();
+	armstrong();
+
+	input();
+	fibonacci();
+
+
+    
+  delay(3000);
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter a number: 5
+Factorial = 120
+
+Enter a number: 1234
+Reverse = 4321
+
+Enter a number: 121
+Palindrome Number
+
+Enter a number: 7
+Prime Number
+
+Enter a number: 153
+Armstrong number
+
+Enter a number: 7
+Fibonacci Series: 0 1 1 2 3 5 8
+
+</code></pre>
+        </div>
+    </div>
+<div class="question-box">
+        <h2>QUESTION 5</h2>
+
+        <div class="question">
+            <pre><b>Q5.Write a program to swap numbers using Call by address. </b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+void swap(int *a, int *b)
+{
+	int temp;
+
+	temp = *a;
+	*a = *b;
+	*b = temp;
+}
+
+void main()
+{
+	int x, y;
+
+	printf("Enter first number: ");
+	scanf("%d",&x);
+	printf("Enter second number: ");
+	scanf("%d",&y);
+
+	printf("\nBefore swapping:\n");
+	printf("First number = %d\n",x);
+	printf("Second number = %d\n",y);
+
+	swap(&x,&y);
+
+	printf("\nAfter swapping:\n");
+	printf("First number = %d\n",x);
+	printf("Second number = %d\n",y);
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>
+C:\TURBOC3\BIN>TC
+Enter first number: 25
+Enter second number: 50
+
+
+Before swapping:
+First number = 25
+Second number = 50
+
+
+After swapping:
+First number = 50
+Second number = 25
+</code></pre>
+        </div>
+    </div>
+
+<div class="question-box">
+        <h2>QUESTION 6</h2>
+
+        <div class="question">
+            <pre><b>Q6.Write a program to swap numbers using Call by function.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+void swap(int a, int b)
+{
+	int temp;
+
+	temp = a;
+	a = b;
+	b = temp;
+
+	printf("\nAfter swapping inside function:\n");
+	printf("First number = %d\n",a);
+	printf("Second number = %d\n",b);
+}
+
+void main()
+{
+	int x, y;
+
+	printf("Enter first number: ");
+	scanf("%d",&x);
+	printf("Enter second number: ");
+	scanf("%d",&y);
+
+	printf("\nBefore swapping:\n");
+	printf("First number = %d\n",x);
+	printf("Second number = %d\n",y);
+
+	swap(x,y);
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>
+C:\TURBOC3\BIN>TC
+Enter first number: 87
+Enter second number: 17
+
+
+Before swapping:
+First number = 87
+Second number = 17
+
+
+After swapping inside function:
+First number = 17
+Second number = 87
+</code></pre>
+        </div>
+    </div>
+<div class="question-box">
+        <h2>QUESTION 7</h2>
+
+        <div class="question">
+            <pre><b>Q7.Make function for find out power of number, enter the number and power from user.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+int power(int a, int b)
+{
+	int i, result = 1;
+	for(i = 1; i <= b; i++)
+	{
+		result = result * a;
+	}
+
+	return result;
+}
+
+void main()
+{
+	int base, exp, res;
+
+	printf("Enter base: ");
+	scanf("%d",&base);
+	printf("Enter exponent: ");
+	scanf("%d",&exp);
+	
+	res = power(base,exp);
+
+	printf("\n%d raised to the power %d = %d",base ,exp ,res);
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>
+C:\TURBOC3\BIN>TC
+Enter base: 2
+Enter exponent: 5
+
+
+2 raised to the power 5 = 32
+</code></pre>
+        </div>
+    </div>
+<div class="question-box">
+        <h2>QUESTION 8</h2>
+
+        <div class="question">
+            <pre><b>Q8. Make function for find out Cube a user entered number.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+#include <stdio.h>
+
+int cube(int a)
+{
+	int result;
+	
+	result = a * a * a;
+
+	return result;
+}
+
+void main()
+{
+	int num, res;
+
+	printf("Enter a number: ");
+	scanf("%d",&num);
+
+	res = cube(num);
+
+	printf("\nCube of %d = %d", num, res);
+
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>
+C:\TURBOC3\BIN>TC
+Enter a number:7
+
+
+Cube of 7 = 343
+</code></pre>
+        </div>
+    </div>
+
+<hr>
+        <p><a href="index.html">Back To Topics</a></p> 
+    </body>
+    </html>

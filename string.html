@@ -1,0 +1,940 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>STRING</title>
+
+   <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        background-color: #F1F5F9;
+        color: #263445;
+    }
+
+    h1 {
+        text-align: center;
+        color: #163A5F;
+    }
+
+    .question-box {
+        background-color: #DCEAF2;
+        padding: 20px;
+        margin-bottom: 25px;
+        border: 1px solid #A9C7D8;
+        border-radius: 10px;
+    }
+
+    .question {
+        background-color: #FFF0DC;
+        padding: 15px;
+        color: #8A4B08;
+        border-radius: 6px;
+        border-left: 4px solid #F39C36;
+    }
+
+    .code {
+        background-color: #163A5F;
+        color: #EAF4F4;
+        padding: 15px;
+        border-radius: 6px;
+        overflow-x: auto;
+    }
+
+    .output {
+        background-color: #DDF3ED;
+        color: #145A48;
+        padding: 15px;
+        border-radius: 6px;
+        border: 1px solid #36A88A;
+        overflow-x: auto;
+    }
+
+    pre {
+        white-space: pre-wrap;
+        overflow-wrap: anywhere;
+    }
+</style>
+</head>
+
+<body>
+
+    <h4 style="text-align: center;">
+        <a href="index.html">HOME</a>
+    </h4>
+
+    <h1>BASIC INPUT OUTPUT</h1>
+    <p style="text-align: center;">PRACTICE QUESTIONS</p>
+    <hr>
+
+    <div class="question-box">
+        <h2>QUESTION 1</h2>
+
+        <div class="question">
+            <pre><b>Q1. Check each character of the string. If it is a lower case then subtract 32 from its ASCII value to convert it into uppercase.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+void main()
+{
+    char str[20];
+    int i;
+
+    printf("Enter a string: ");
+    gets(str);
+
+    for(i = 0; str[i] != '\0'; i++)
+    {
+        if(str[i] >= 'a' && str[i] <= 'z')
+        str[i] = str[i] - 32;
+    }
+
+    printf("Uppercase String : %s",str);
+    return 0;
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN&gt;TC
+Enter a string: varsha
+Uppercase String : VARSHA</code></pre>
+        </div>
+    </div>
+
+    <div class="question-box">
+        <h2>QUESTION 2</h2>
+
+        <div class="question">
+            <pre><b>Q2.Write a program to enter a string from user and convert into lowercase.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+void main()
+{
+    char str[20];
+    int i;
+
+    printf("Enter a string: ");
+    gets(str);
+
+    for(i = 0; str[i] != '\0'; i++)
+    {
+        if(str[i] >= 'A' && str[i] <= 'Z')
+        str[i] = str[i] + 32;
+    }
+
+    printf("Lowercase String : %s",str);
+    return 0;
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter a string: VARSHA
+Lowercase String : varsha </code></pre>
+        </div>
+    </div>
+
+    <div class="question-box">
+        <h2>QUESTION 3</h2>
+
+        <div class="question">
+            <pre><b>Q3.Write a program to enter a string from user and convert into sentence case.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+void main()
+{
+    char str[20];
+    int i;
+
+    printf("Enter a string: ");
+    gets(str);
+
+    if(str[0] >= 'a' && str[0] <= 'z')
+      str[0] = str[0] - 32;
+
+    for(i = 1; str[i] != '\0'; i++)
+    {
+        if(str[i] >= 'A' && str[i] <= 'Z')
+        str[i] = str[i] + 32;
+    }
+
+    printf("Sentence case: %s",str);
+    return 0;
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter a string: vARSHA acharya
+Sentence case: Varsha acharya</code></pre>
+        </div>
+    </div>
+
+    <div class="question-box">
+        <h2>QUESTION 4</h2>
+
+        <div class="question">
+            <pre><b>Q4. Write a program to enter a string from user and convert into title case.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>
+ #include &lt;stdio.h&gt;
+void main()
+{
+    char str[20];
+    int i;
+
+    printf("Enter a string: ");
+    gets(str);
+
+    for(i = 0; str[i] != '\0'; i++)
+    {
+        if(i==0 || str[i-1] == ' ')
+        {
+            if(str[i] >= 'a' && str[i] <= 'z')
+              str[i] = str[i] - 32;
+        }
+
+        else
+        {
+            if(str[i] >= 'A' && str[i] <= 'Z')
+              str[i] = str[i] + 32;
+        }
+        }
+
+    printf("Title case: %s",str);
+    return 0;
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter a string: welcome tO cHANDiGArH
+Title case: Welcome To Chandigarh
+</code></pre>
+        </div>
+    </div>
+
+    <div class="question-box">
+        <h2>QUESTION 5</h2>
+
+        <div class="question">
+            <pre><b>Q5. Write a program to enter a string from user and convert into toggle case.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>
+#include &lt;stdio.h&gt;
+
+ void main() {
+    char str[20];
+    int i;
+
+    printf("Enter a string: ");
+    gets(str);
+
+    for(i = 0; str[i] != '\0'; i++)
+    {
+        if(str[i] >= 'a' && str[i] <= 'z')
+        {
+            str[i] = str[i] - 32;
+        }
+
+        else if(str[i] >= 'A' && str[i] <= 'Z')
+        {
+            str[i] = str[i] + 32;
+        }
+    }
+
+    printf("Toggle case: %s",str);
+    return 0;
+}
+</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code> C:\TURBOC3\BIN>TC
+Enter a string: cODING Is fUN
+Toggle case: Coding iS Fun
+</code></pre>
+        </div>
+    </div> 
+    <div class="question-box">
+        <h2>QUESTION 6</h2>
+    
+
+        <div class="question">
+            <pre><b>Q6. Write a program to enter a string from user and final length of the string.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+#include &lt;dos.h&gt;
+
+void main() {
+   char str[20];
+    int num;
+
+    printf("Enter a string: ");
+    gets(str);
+
+    num = strlen(str);
+
+    printf("Length of string: %d",num);
+     return 0;
+}
+</code></pre>
+</div>
+        <h3>OUTPUT</h3>
+<div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter a string: Programming is fun
+Length of string: 18
+
+ </code></pre>
+        </div>
+    </div>
+<div class="question-box">
+        <h2>QUESTION 7</h2>
+    
+
+        <div class="question">
+            <pre><b>Q7.Write a program to enter a two string from user and compare those string.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+void main()
+{
+    char str[20], str2[20];
+
+    printf("Enter first string: ");
+    gets(str);
+
+    printf("Enter Second string: ");
+    gets(str2);
+
+    if(strcmp(str,str2) == 0)
+      printf("Both strings are equal.");
+    else
+      printf("Both strings are not equal.");
+    return 0;
+}
+</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter first string: Computer
+Enter Second string: BCA-I
+Both strings are not equal.
+s
+ </code></pre>
+        </div>
+    </div>
+    
+     <div class="question-box">
+        <h2>QUESTION 8</h2>
+    
+
+        <div class="question">
+            <pre><b>Q8.Write a program to enter a two string from user and concatenate the string.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+void main()
+{
+char str[20], str2[20];
+
+    printf("Enter first string: ");
+    gets(str);
+
+    printf("Enter Second string: ");
+    gets(str2);
+
+    strcat(str,str2);
+
+    printf("Concatenated string: %s",str);
+    
+    return 0;
+
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code> C:\TURBOC3\BIN>TC
+Enter first string: varsha from 
+Enter Second string: BCA 1st Year
+Concatenated string: varsha from BCA 1st Year
+</code></pre>
+        </div>
+    </div>
+          <div class="question-box">
+        <h2>QUESTION 9</h2>
+    
+
+        <div class="question">
+            <pre><b>Q9.Write a program to enter a string from user and copy that string into another string.</b></pre>
+        </div>
+        
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+void main()
+{
+    char str[20], str2[20];
+
+    printf("Enter a string: ");
+    gets(str);
+
+    strcpy(str2,str);
+
+    printf("Original string: %s\n",str);
+    printf("Copied string: %s",str2);
+    return 0; 
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter a string: Welcome to PGGC-11
+Original string: Welcome to PGGC-11
+Copied string: Welcome to PGGC-11</code></pre>
+        </div>
+    </div>
+    
+        <div class="question-box">
+        <h2>QUESTION 10</h2>
+    
+
+        <div class="question">
+            <pre><b>Q10.Write a program to enter the string from user ,enter a number from user ,if the user enter 0 then you will print first character of string ,if the user enter 1 then you will print second character of string ,if user enter 2 then you will print third character of string ,if user enter 3 then you point fourth character of string and if out of string then you will print out of bound.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;                
+void main()
+{
+    
+    char str[20];
+    int num;
+
+    printf("Enter a string: ");
+    gets(str);
+    printf("Enter position: ");
+    scanf("%d",&num);
+
+    if(num >= 0 && num < strlen(str))
+      printf("Character: %c",str[num]);
+    else
+      printf("Out of bound!");
+}    
+     </code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter a string: Computer
+Enter position: 3
+Character: p</code></pre>
+        </div>
+    </div>
+         <div class="question-box">
+        <h2>QUESTION 11</h2>
+
+
+        <div class="question">
+            <pre><b>Q11. Write a program to enter the string from user and print each character in new line.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+void main()
+{
+    char str[20];
+    int i;
+
+    printf("Enter a string: ");
+    gets(str);
+
+    printf("Characters are :\n");
+
+    for(i = 0; str[i] != '\0'; i++)
+    {
+        printf("%c\n",str[i]);
+    }
+}
+     </code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter a string: PGGC-11
+Characters are :
+P
+G
+G
+C
+-
+1
+1
+</code></pre>
+        </div>
+    </div>
+
+            <div class="question-box">
+        <h2>QUESTION 12</h2>
+
+
+        <div class="question">
+            <pre><b>Q12. Write a program to enter the string from user and copy reverse order into another string.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+void main()
+{
+   
+    char str[20], str2[20];
+    int i, num;
+
+    printf("Enter a string: ");
+    gets(str);
+
+    num = strlen(str) - 1;
+
+    for(i = 0; num >= 0; i++)
+    {
+        str2[i] = str[num];
+        num--;
+    }
+
+    str2[i] = '\0';
+
+    printf("Original string: %s\n",str);
+    printf("Copied string: %s",str2);
+}
+     </code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter a string: Welcome to PGGC-11
+Original string: Welcome to PGGC-11
+Copied string: 11-CGGP ot emocleW</code></pre>
+</div>
+</div>
+
+        <div class="question-box">
+        <h2>QUESTION 13</h2>
+
+
+        <div class="question">
+            <pre><b>Q13.Write a program to enter two string from user and print difference each character.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+void main()
+{
+    char str[20], str2[20];
+    int i, diff;
+
+    printf("Enter first string: ");
+    gets(str);
+    printf("Enter second string: ");
+    gets(str2);
+
+    for(i = 0; str[i] != '\0' && str2[i] != '\0'; i++)
+    {
+        printf("Difference of %c and %c = %d\n",str[i],str2[i],diff);
+    }
+}
+     </code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>
+C:\TURBOC3\BIN>TC
+Enter first string: ABC
+Enter second string: XYZ
+Difference of A and X = -23
+Difference of B and Y = -23
+Difference of C and Z = -23 
+</code></pre>
+</div>
+</div> 
+      <div class="question-box">
+        <h2>QUESTION 14</h2>
+
+
+        <div class="question">
+            <pre><b>Q14.Write a program to enter the string from user and enter a character , it is exist or not.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;                
+void main()
+{
+    char str[20], ch;
+    int i, found = 0;
+
+    printf("Enter a string: ");
+    gets(str);
+    printf("Enter a character: ");
+    ch = getche();
+    
+    for(i = 0; str[i] != '\0'; i++)
+    {
+        if(str[i] == ch)
+        {
+            found = 1;
+            break;
+        }
+    }
+
+    if(found == 1)
+      printf("Character exists in string.");
+    else
+      printf("Character doesn't exists in string.");
+}
+     </code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter a string: Sushil
+Enter a character: s
+Character exists in string. </code></pre>
+</div>
+</div>
+         <div class="question-box">
+        <h2>QUESTION 15</h2>
+
+
+        <div class="question">
+            <pre><b>Q15.Write a program to enter the string from user and enter a character if it is exist then print the bound number.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+void main()
+{
+    
+    char str[20], ch;
+    int i, found = 0;
+
+    printf("Enter a string: ");
+    gets(str);
+    printf("Enter a character: ");
+    ch = getche();
+    
+    for(i = 0; str[i] != '\0'; i++)
+    {
+        if(str[i] == ch)
+        {
+            printf("Character found at position: %d", i + 1);
+            found = 1;
+            break;
+        }
+    }
+
+    if(found == 0)
+      printf("Character not found.");
+}
+     </code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter a string: Sushil
+Enter a character: i
+Character found at position: 5 </code></pre>
+</div>
+</div>
+
+        <div class="question-box">
+        <h2>QUESTION 16</h2>
+
+
+        <div class="question">
+            <pre><b>Q16.Write a program to enter the string from user and count all vowels..</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+void main()
+{
+    char str[20];
+    int i, count = 0;
+
+    printf("Enter a string: ");
+    gets(str);
+    
+    for(i = 0; str[i] != '\0'; i++)
+    {
+        if(str[i] == 'a' || str[i] == 'e' || str[i] == 'i' ||
+           str[i] == 'o' || str[i] == 'u' || str[i] == 'A' || 
+           str[i] == 'E' || str[i] == 'I' || str[i] == 'O' ||
+           str[i] == 'U')
+        {
+            count++;
+        }
+    }
+
+    printf("Total vowels : %d",count);
+}
+     </code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter a string:Education
+Total vowels : 5</code></pre>
+</div>
+</div>
+
+        <div class="question-box">
+        <h2>QUESTION 17</h2>
+
+
+        <div class="question">
+            <pre><b>Q17. Write a program to enter the string from user and enter bound number and print character on that bound.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+void main()
+{
+
+    char str[20];
+    int num;
+
+    printf("Enter a string: ");
+    gets(str);
+    printf("Enter index number: ");
+    scanf("%d",&num);
+
+    if(num >= 0 && num < strlen(str))
+      printf("Character: %c",str[num]);
+    else
+      printf("Out of bound!");
+}
+     </code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter a string: Chandigarh
+Enter index number: 4
+Character: d </code> </pre>
+</div>
+</div>
+        <div class="question-box">
+        <h2>QUESTION 18</h2>
+
+
+        <div class="question">
+            <pre><b>Q18.Write a program to enter the string from user and check string palindrome example (using reverse).</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+void main()
+{
+    char str[20];
+    int i, num, check = 1;
+
+    printf("Enter a string: ");
+    gets(str);
+
+    num = strlen(str) - 1;
+
+    for(i = 0; i < num; i++)
+    {
+        if(str[i] != str[num])
+        {
+            check = 0;
+            break;
+        }
+        num--;
+    }
+
+    if(check == 1)
+      printf("String is palindrome.");
+    else
+      printf("String is not palindrome.");
+}
+     </code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Enter a string: level
+String is palindrome. </code></pre>
+</div>
+</div>
+    <div class="question-box">
+        <h2>QUESTION 19</h2>
+
+
+        <div class="question">
+            <pre><b>Q19.Write a program to Enter the data from user the data consist of roll no. ,name ,class , marks of 5 subjects.
+
+</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+void main()
+{
+char name[20], class[10];
+    int i, roll, m[5];
+
+    printf("Roll no. : ");
+    scanf("%d",&roll);
+    fflush(stdin);
+    printf("Enter Student name: ");
+    gets(name);
+    printf("Enter class: ");
+    gets(class);
+    printf("Enter marks of 5 subjects: \n");
+    for(i = 0; i <= 4; i++)
+    {
+    printf("Subject %d: ", i + 1);
+    scanf("%d",&m[i]);
+    }
+
+    printf("\nStudent Details\n");
+    printf("Roll Number: %d\n",roll);
+    printf("Name : %s\n",name);
+    printf("Class : %s\n",class);
+    for(i = 0; i <= 4; i++)
+    {
+    printf("Subjects %d marks: %d\n", i + 1, m[i]);
+    }
+}
+     </code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>C:\TURBOC3\BIN>TC
+Roll no. : 4121
+Enter Student name: VARSHA
+Enter class: BCA-I
+Enter marks of 5 subjects: 
+Subject 1: 88
+Subject 2: 76
+Subject 3: 96
+Subject 4: 55
+Subject 5: 34
+
+
+Student Details
+Roll Number: 4121
+Name : VARSHA
+Class : BCA-I 
+Subject 1: 88
+Subject 2: 76
+Subject 3: 96
+Subject 4: 55
+Subject 5: 34</code></pre>
+</div>
+</div>        <hr>
+        <p><button><a href="index.html">Back To Topics</a></button></p> 
+</body>
+</html>
