@@ -4,65 +4,16 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>DECISION CONTROL STRUCTURE</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 20px;
-        background-color: #F1F5F9;
-        color: #263445;
-    }
+    <title>BASIC INPUT OUTPUT FUNCTIONS</title>
 
-    h1 {
-        text-align: center;
-        color: #163A5F;
-    }
+    <link rel="stylesheet" href="styles.css">
 
-    .question-box {
-        background-color: #DCEAF2;
-        padding: 20px;
-        margin-bottom: 25px;
-        border: 1px solid #A9C7D8;
-        border-radius: 10px;
-    }
-
-    .question {
-        background-color: #FFF0DC;
-        padding: 15px;
-        color: #8A4B08;
-        border-radius: 6px;
-        border-left: 4px solid #F39C36;
-    }
-
-    .code {
-        background-color: #163A5F;
-        color: #EAF4F4;
-        padding: 15px;
-        border-radius: 6px;
-        overflow-x: auto;
-    }
-
-    .output {
-        background-color: #DDF3ED;
-        color: #145A48;
-        padding: 15px;
-        border-radius: 6px;
-        border: 1px solid #36A88A;
-        overflow-x: auto;
-    }
-
-    pre {
-        white-space: pre-wrap;
-        overflow-wrap: anywhere;
-    }
-</style>
 </head>
-
 
 <body>
 
     <h4 style="text-align: center;">
-        <a href="index.html">HOME</a>
+        <a href="index.html" class=" Home-link"> Home</a>
     </h4>
 
     <h1>BASIC INPUT OUTPUT</h1>
@@ -74,7 +25,7 @@
 
         <div class="question">
             <pre><b>Q1. Write a program to print the message:
-Today I made my first C Program.</b></pre>
+Learning C Programming is interesting!</b></pre>
         </div>
 
         <h3>CODE</h3>
@@ -83,15 +34,14 @@ Today I made my first C Program.</b></pre>
             <pre><code>#include &lt;stdio.h&gt;
 void main()
 {
-    printf("Today I made my first C Program.");
-    return 0;
+    printf("Learning C Programming is interesting!");
 }</code></pre>
         </div>
 
         <h3>OUTPUT</h3>
 
         <div class="output">
-            <pre><code>Today I made my first C Program.</code></pre>
+            <pre><code>Learning C Programming is interesting!</code></pre>
         </div>
     </div>
 
@@ -111,16 +61,15 @@ void main()
     char ch;
     printf("ENTER A CHARACTER: ");
     scanf(" %c", &amp;ch);
-    printf("character=%c", ch);
-    return 0;
+    printf("Your character is = %c", ch);
 }</code></pre>
         </div>
 
         <h3>OUTPUT</h3>
 
         <div class="output">
-            <pre><code>ENTER A CHARACTER: A
-character=A</code></pre>
+            <pre><code>ENTER A CHARACTER: M
+Your character is = M</code></pre>
         </div>
     </div>
 
@@ -143,19 +92,17 @@ void main()
     scanf(" %c %c %c %c", &amp;a, &amp;b, &amp;c, &amp;d);
 
     printf("%c\n%c\n%c\n%c", a, b, c, d);
-
-    return 0;
 }</code></pre>
         </div>
 
         <h3>OUTPUT</h3>
 
         <div class="output">
-            <pre><code>ENTER 4 CHARACTERS: ABCD
-A
-B
-C
-D</code></pre>
+            <pre><code>ENTER 4 CHARACTERS: WXYZ
+W
+X
+Y
+Z</code></pre>
         </div>
     </div>
 
@@ -169,19 +116,17 @@ D</code></pre>
         <h3>CODE</h3>
 
         <div class="code">
-            <pre><code>
- #include &lt;stdio.h&gt;
+            <pre><code>#include &lt;stdio.h&gt;
 void main()
 {
-    printf("\t\t VARSHA");
-    return 0;
+    printf("\t\t ABHAY OJHA");
 }</code></pre>
         </div>
 
         <h3>OUTPUT</h3>
 
         <div class="output">
-            <pre><code>        VARSHA</code></pre>
+            <pre><code>        ABHAY OJHA</code></pre>
         </div>
     </div>
 
@@ -189,251 +134,261 @@ void main()
         <h2>QUESTION 5</h2>
 
         <div class="question">
-            <pre><b>Q5. Write a program to store single quote and print that variable to show single quote on output screen.</b></pre>
+            <pre><b>Q5. Write a program to store a single quote and print that variable on the output screen.</b></pre>
         </div>
 
         <h3>CODE</h3>
 
         <div class="code">
-            <pre><code>
-#include &lt;stdio.h&gt;
+            <pre><code>#include &lt;stdio.h&gt;
 
- void main() {
+void main()
+{
     char ch = '\'';
-    printf("The single quote is: %c\n", ch);
 
-    return 0;
-}
-</code></pre>
+    printf("Stored quotation mark is: %c\n", ch);
+}</code></pre>
         </div>
 
         <h3>OUTPUT</h3>
 
         <div class="output">
-            <pre><code> The single quote is: '</code></pre>
+            <pre><code>Stored quotation mark is: '</code></pre>
         </div>
-    </div> 
+    </div>
+
     <div class="question-box">
         <h2>QUESTION 6</h2>
-    
 
         <div class="question">
-            <pre><b>Q6. Write a program for printing your name on output screen but your name should blink 5 times.</b></pre>
+            <pre><b>Q6. Write a program for printing your name on the output screen but your name should blink 5 times.</b></pre>
         </div>
 
         <h3>CODE</h3>
 
         <div class="code">
-            <pre><code>
-#include &lt;stdio.h&gt;
+            <pre><code>#include &lt;stdio.h&gt;
 #include &lt;conio.h&gt;
 #include &lt;dos.h&gt;
 
-void main() {
+void main()
+{
     int i;
     clrscr();
-    for(i=1;i&lt;=5;i++)
+
+    for(i = 1; i &lt;= 5; i++)
     {
-        printf("VARSHA");
-        delay(500)
+        printf("ABHAY OJHA");
+        delay(500);
         clrscr();
         delay(500);
     }
-    getch();
 
-    return 0;
-}
-</code></pre>
-</div>
-</div>
-<div class="question-box">
+    getch();
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>ABHAY OJHA</code></pre>
+        </div>
+    </div>
+
+    <div class="question-box">
         <h2>QUESTION 7</h2>
-    
 
         <div class="question">
-            <pre><b>Q7. Write the program to display this output ?
-#include
-#include
-#include
-void main ()
-{
-clrscr();
-printf(“hello,welcome to c”);
-delay(5000);
-}</b></pre>
+            <pre><b>Q7. Write a program to display the following C program as output.</b></pre>
         </div>
 
         <h3>CODE</h3>
 
         <div class="code">
-            <pre><code>
-#include &lt;stdio.h&gt;
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
 
 void main()
 {
     clrscr();
-    printf("#include\n#include\n#include\n");
+
+    printf("#include &lt;stdio.h&gt;\n");
+    printf("#include &lt;conio.h&gt;\n");
+    printf("#include &lt;dos.h&gt;\n");
     printf("void main()\n");
     printf("{\n");
-    printf("clrscr();\n");
-    printf("printf(\"hello,welcome to c\");\n");
-    printf("delay(5000);\n");
+    printf("    clrscr();\n");
+    printf("    printf(\"Welcome to C Programming\");\n");
+    printf("    delay(3000);\n");
     printf("}");
-    delay(5000);
-}   
-    return 0;
-}
-</code></pre>
-        </div>
 
-        <h3>OUTPUT</h3>
-
-        <div class="output">
-            <pre><code> #include
-#include
-#include
-void main()
-{
-clrscr();
-printf("hello,welcome to c");
-delay(5000);    
-} 
- </code></pre>
-        </div>
-    </div>
-    
-     <div class="question-box">
-        <h2>QUESTION 8</h2>
-    
-
-        <div class="question">
-            <pre><b>Q8.Write a program to print your name at the center of the page.</b></pre>
-        </div>
-
-        <h3>CODE</h3>
-
-        <div class="code">
-            <pre><code>#include &lt;stdio.h&gt;
-void main()
-{
-    clrscr();
-    printf("\n\n\n");
-    printf("                                                            VARSHA");
-}
-    
-    return 0;
-}
+    delay(3000);
 }</code></pre>
         </div>
 
         <h3>OUTPUT</h3>
 
         <div class="output">
-            <pre><code>                                                                                     VARSHA</code></pre>
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;dos.h&gt;
+void main()
+{
+    clrscr();
+    printf("Welcome to C Programming");
+    delay(3000);
+}</code></pre>
         </div>
     </div>
-          <div class="question-box">
-        <h2>QUESTION 9</h2>
-    
+
+    <div class="question-box">
+        <h2>QUESTION 8</h2>
 
         <div class="question">
-            <pre><b>Q9.Enter password display like ****** ?</b></pre>
+            <pre><b>Q8. Write a program to print your name at the center of the page.</b></pre>
         </div>
-        
 
         <h3>CODE</h3>
 
         <div class="code">
             <pre><code>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
 void main()
 {
-    char pass[6];
-    int i=0;
+    clrscr();
+
+    printf("\n\n\n");
+    printf("                                                            ABHAY OJHA");
+}</code></pre>
+        </div>
+
+        <h3>OUTPUT</h3>
+
+        <div class="output">
+            <pre><code>
+
+
+                                                            ABHAY OJHA</code></pre>
+        </div>
+    </div>
+
+    <div class="question-box">
+        <h2>QUESTION 9</h2>
+
+        <div class="question">
+            <pre><b>Q9. Write a program to enter a password and display it in the form of ******.</b></pre>
+        </div>
+
+        <h3>CODE</h3>
+
+        <div class="code">
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
+void main()
+{
+    char pass[7];
+    int i;
 
     clrscr();
 
-    printf("Enter 6 digit Password:");
-    for(i=0; i<=6; i++){
-        pass[i]=getch();
+    printf("Enter 6 character Password: ");
+
+    for(i = 0; i &lt; 6; i++)
+    {
+        pass[i] = getch();
         printf("*");
     }
-}    
+
+    pass[6] = '\0';
 }</code></pre>
         </div>
 
         <h3>OUTPUT</h3>
 
         <div class="output">
-            <pre><code>Enter 6 digit Passsword: ******</code></pre>
+            <pre><code>Enter 6 character Password: ******</code></pre>
         </div>
     </div>
-    
-        <div class="question-box">
+
+    <div class="question-box">
         <h2>QUESTION 10</h2>
-    
 
         <div class="question">
-            <pre><b>Q10.Enter two character from user and print ASCII value ?</b></pre>
+            <pre><b>Q10. Enter two characters from the user and print their ASCII values.</b></pre>
         </div>
 
         <h3>CODE</h3>
 
         <div class="code">
             <pre><code>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
 void main()
 {
-    char ch1,ch2;
-    
+    char ch1, ch2;
+
     clrscr();
 
-    printf("Enter first character:");
-    ch1=getche();
-    printf("\nEnter Second character:");
-    ch2=getche();
-    printf("\nASCII value of first character = %d\n",ch1);
-    printf("ASCII value of Second character = %d\n",ch2);
-}    
-     </code></pre>
+    printf("Enter first character: ");
+    ch1 = getche();
+
+    printf("\nEnter second character: ");
+    ch2 = getche();
+
+    printf("\nASCII value of first character = %d\n", ch1);
+    printf("ASCII value of second character = %d\n", ch2);
+}</code></pre>
         </div>
 
         <h3>OUTPUT</h3>
 
         <div class="output">
-            <pre><code>Enter first character:A
-Enter Second character:B
-ASCII value of first character = 65
-ASCII value of Second character = 66</code></pre>
+            <pre><code>Enter first character: C
+Enter second character: D
+ASCII value of first character = 67
+ASCII value of second character = 68</code></pre>
         </div>
     </div>
-         <div class="question-box">
+
+    <div class="question-box">
         <h2>QUESTION 11</h2>
 
-
         <div class="question">
-            <pre><b>Q11. Print all ASCII character 0 to 127 ?</b></pre>
+            <pre><b>Q11. Write a program to print all ASCII characters from 0 to 127.</b></pre>
         </div>
 
         <h3>CODE</h3>
 
         <div class="code">
             <pre><code>#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+
 void main()
 {
     int i;
-    
+
     clrscr();
 
-    for(i=0; i<=127; i++){
-        printf("%d = %c\n",i,i);
+    for(i = 0; i &lt;= 127; i++)
+    {
+        printf("%d = %c\n", i, i);
     }
-     </code></pre>
+}</code></pre>
         </div>
 
         <h3>OUTPUT</h3>
 
         <div class="output">
-            <pre><code>0 = 
-1 = 
+            <pre><code>0 =
+1 =
+...
+65 = A
+66 = B
+67 = C
+68 = D
 ...
 104 = h
 105 = i
@@ -458,11 +413,17 @@ void main()
 124 = |
 125 = }
 126 = ~
-127 =
-</code></pre>
+127 =</code></pre>
         </div>
     </div>
-        <hr>
-        <p><button><a href="index.html">Back To Topics</a></button></p> 
+
+    <hr>
+
+    <a href="index.html" class=" back-link"> back to topic </a>
+
+    <div class="footer">
+        <p>BCA 1st Year | C Programming Practical Questions</p>
+    </div>
+
 </body>
 </html>
